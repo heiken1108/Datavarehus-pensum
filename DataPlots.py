@@ -11,9 +11,10 @@ def genererData(antallPunkter = 300, antallDimensjoner = 2, antallKlynger = 4, t
         data_points, clusterInformation = make_blobs(n_samples=antallPunkter, centers=antallKlynger, n_features=antallDimensjoner)
     return data_points
 
-def plotDataPunkter(data_punkter):
+def plotDataPunkter(data_punkter, centroids):
     plt.figure(figsize=(6, 4))
     plt.scatter(data_punkter[:, 0], data_punkter[:, 1], s=50, cmap='viridis')
+    plt.scatter(centroids[:, 0], centroids[:, 1], s=50, cmap='viridis', c='red', marker='x')
     plt.xlabel('X1')
     plt.ylabel('X2')
     plt.title('Data')

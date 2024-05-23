@@ -96,3 +96,6 @@ def Mean(X):
     for i in range(len(X)):
         s += X[i]
     return s/len(X)
+
+def Lift(X, Y, transaksjoner):
+    return confidence(X,Y,transaksjoner)/supportCount(Y, transaksjoner)

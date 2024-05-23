@@ -4,6 +4,12 @@ import DataPlots as Dp
 import Matriser as M
 import Algoritmer as A
 
-items, transaksjoner = T.GenererTransaksjon(6, 5, True)
+k = 7
+d = 2
 
-T.printTransaksjoner(A.Apriori_Itemset_Generator(items, transaksjoner, 3))
+punkter = Dp.genererData(antallDimensjoner=d, antallKlynger=k, tilfeldig = True)
+
+centroids = A.KMeans(punkter, k, d)
+
+
+Dp.plotDataPunkter(punkter, centroids)

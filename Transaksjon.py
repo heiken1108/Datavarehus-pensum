@@ -31,3 +31,11 @@ def sorterItems(transaksjoner):
 def printTransaksjoner(transaksjoner):
     for key in transaksjoner:
         print(key, ":", transaksjoner[key]) 
+
+def VerticalDatalayout(items, transactions):
+    VerticalDataLayout = {item: [] for item in items}
+    for item in items:
+        for key, value in transactions.items():
+            if item in value:
+                VerticalDataLayout[item].append(key)   
+    return VerticalDataLayout
