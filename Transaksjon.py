@@ -20,7 +20,7 @@ def GenererTransaksjon(antallTransaksjoner, antallItems, tilfeldig):
             antall = secrets.randbelow(antallItems) + 1
             transaksjoner[i+1] = random.sample(Items[0:antallItems], antall)
     sorterItems(transaksjoner)
-    return transaksjoner
+    return Items[0:antallItems], transaksjoner
 
 
 
